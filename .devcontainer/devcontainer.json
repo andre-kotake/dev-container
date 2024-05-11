@@ -1,0 +1,35 @@
+{
+    "name": "kotake-devcontainer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "enkia.tokyo-night",
+                "esbenp.prettier-vscode",
+                "vscode-icons-team.vscode-icons"
+            ],
+            "settings": {
+                "prettier.printWidth": 80,
+                "prettier.tabWidth": 4,
+                "prettier.trailingComma": "es5",
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash"
+                    }
+                },
+                "workbench.colorTheme": "Tokyo Night",
+                "workbench.iconTheme": "vscode-icons"
+            }
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": false,
+            "upgradePackages": true
+        }
+    },
+    "postCreateCommand": "uname -a"
+}
